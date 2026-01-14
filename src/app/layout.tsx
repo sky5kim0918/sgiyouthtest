@@ -15,12 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "좌/우 선택 유형 테스트",
   description: "좌/우 선택을 통한 유형 테스트",
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
