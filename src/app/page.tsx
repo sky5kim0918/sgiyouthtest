@@ -1,14 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { saveName, getName, clearAnswers, clearWinner } from '@/lib/store';
 
 export default function Home() {
   const [name, setName] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-  const router = useRouter();
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     // 기존 이름이 있으면 불러오기
@@ -57,19 +56,21 @@ export default function Home() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
       {/* 배경 이미지 */}
-      <div className="absolute inset-0">
-        <Image
-          src="/home-bg.jpg"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-          unoptimized
-          onError={(e) => {
-            console.error('배경 이미지 로드 실패:', '/home-bg.jpg');
-            // 이미지가 없어도 계속 진행 가능하도록
-          }}
-        />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-100">
+        {!imageError && (
+          <Image
+            src="/home-bg.jpg"
+            alt="Background"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+            onError={() => {
+              console.error('배경 이미지 로드 실패:', '/home-bg.jpg');
+              setImageError(true);
+            }}
+          />
+        )}
         {/* 배경 어둡게 처리 */}
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
