@@ -15,6 +15,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "창가청년 유형 테스트",
   description: "창가청년 유형 테스트",
+  openGraph: {
+    title: "창가청년 유형 테스트",
+    description: "창가청년 유형 테스트",
+    type: "website",
+    locale: "ko_KR",
+    siteName: "창가청년 유형 테스트",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "창가청년 유형 테스트",
+    description: "창가청년 유형 테스트",
+  },
 };
 
 export const viewport = {

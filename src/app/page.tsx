@@ -98,7 +98,16 @@ export default function Home() {
             />
             <button
             onClick={handleStart}
-            className="w-full rounded-lg bg-indigo-600 px-6 py-4 text-lg font-semibold text-white transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            className="w-full rounded-lg px-6 py-4 text-lg font-semibold text-white transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
+            style={{ 
+              backgroundColor: '#a1c7dd',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#8bb5d1';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#a1c7dd';
+            }}
           >
             테스트 시작
           </button>
