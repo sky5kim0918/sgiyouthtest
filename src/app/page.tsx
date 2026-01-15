@@ -72,7 +72,7 @@ export default function Home() {
           />
         )}
         {/* 배경 어둡게 처리 */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* <div className="absolute inset-0 bg-black/40"></div> */}
       </div>
 
       {/* 콘텐츠 */}
