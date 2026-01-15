@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "좌/우 선택 유형 테스트",
-  description: "좌/우 선택을 통한 유형 테스트",
+  title: "창가청년 유형 테스트",
+  description: "창가청년 유형 테스트",
 };
 
 export const viewport = {

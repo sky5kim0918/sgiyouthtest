@@ -77,10 +77,8 @@ export default function Home() {
 
       {/* 콘텐츠 */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4">
-        <div className="w-full max-w-md space-y-8 rounded-2xl bg-white/95 backdrop-blur-sm p-8 shadow-2xl">
-          <h1 className="text-center text-3xl font-bold text-gray-800">
-            {/* 타이틀 들어가는 곳 */}
-          </h1>
+        {/* <div className="w-full max-w-md space-y-8 rounded-2xl bg-white/95 backdrop-blur-sm p-8 shadow-2xl"> */}
+
           <div className="space-y-4">
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">
               본명을 입력해주세요
@@ -105,7 +103,7 @@ export default function Home() {
           >
             테스트 시작
           </button>
-        </div>
+        
       </div>
     </div>
   );
