@@ -96,13 +96,14 @@ export default function Home() {
               placeholder="예시 : 김하늘"
               className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
             />
-          </div>
-          <button
+            <button
             onClick={handleStart}
             className="w-full rounded-lg bg-indigo-600 px-6 py-4 text-lg font-semibold text-white transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
             테스트 시작
           </button>
+          </div>
+          
         
       </div>
     </div>
