@@ -162,9 +162,9 @@ export default function TestPage() {
           aria-label="우측 선택"
         >
           <div className="absolute bottom-0 left-1/2 right-0 p-6">
-            <div className="rounded-lg bg-black/60 p-4 text-center text-white backdrop-blur-sm">
+            {/* <div className="rounded-lg bg-black/60 p-4 text-center text-white backdrop-blur-sm">
               <div className="text-lg font-semibold">{currentQuestion.rightChoice.text}</div>
-            </div>
+            </div> */}
           </div>
         </button>
       </div>
