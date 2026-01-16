@@ -11,6 +11,7 @@ import { questions } from '@/lib/testData';
 export default function ResultPage() {
   const [name, setName] = useState<string | null>(null);
   const [winner, setWinner] = useState<string | null>(null);
+  const [imageVariant, setImageVariant] = useState<number>(1); // 1 또는 2
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
@@ -36,6 +37,11 @@ export default function ResultPage() {
 
     setName(savedName);
     setWinner(resultWinner);
+    
+    // 랜덤으로 1 또는 2 선택
+    const randomVariant = Math.random() < 0.5 ? 1 : 2;
+    setImageVariant(randomVariant);
+    
     setIsLoading(false);
   }, [router]);
 
@@ -43,8 +49,8 @@ export default function ResultPage() {
     if (!winner || !name) return;
 
     try {
-      const imageUrl = `/results/${winner}.png`;
-      await addWatermarkAndDownload(imageUrl, name, `result_${name}_${winner}.png`);
+      const imageUrl = `/results/${winner}${imageVariant}.png`;
+      await addWatermarkAndDownload(imageUrl, name, `result_${name}_${winner}${imageVariant}.png`);
     } catch (error) {
       console.error('다운로드 실패:', error);
       alert('이미지 다운로드에 실패했습니다.');
@@ -67,7 +73,7 @@ export default function ResultPage() {
         </h1>
         <div className="relative aspect-[9/16] w-full overflow-hidden rounded-2xl shadow-2xl">
           <Image
-            src={`/results/${winner}.png`}
+            src={`/results/${winner}${imageVariant}.png`}
             alt={`Result ${winner}`}
             fill
             className="object-cover"
